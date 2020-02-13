@@ -1,0 +1,100 @@
+{% extends 'base.html' %} {% block title %} | Create  {% endblock %} {% block content %}
+<section id="Create" class="bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h4>
+                            <i class="fas fa-user-plus"></i> Create</h4>
+                    </div>
+                    <div class="card-body">
+                        <!-- Alerts -->
+                        {% include 'partials/_alerts.html' %}
+                        <form action="{% url 'create' %}" method="POST">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="title">Title</label>
+                                <input type="text" name="title" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">address</label>
+                                <input type="text" name="address" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">city</label>
+                                <input type="text" name="city" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">state</label>
+                                <input type="text" name="state" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="zipcode">zipcode</label>
+                                <input type="text" name="zipcode" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">description</label>
+                                <input type="text" name="description" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="price">price</label>
+                                <input type="text" name="price" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bedrooms">bedrooms</label>
+                                <input type="text" name="bedrooms" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bathrooms">bathrooms</label>
+                                <input type="text" name="bathrooms" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="garage">garage</label>
+                                <input type="text" name="garage" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="sqft">sqft</label>
+                                <input type="text" name="sqft" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lot_size">lot_size</label>
+                                <input type="text" name="lot_size" class="form-control" required>
+                            </div>
+<!--                             <div class="form-group">
+                                <label for="photo_main">photo_main</label>
+                                <input type="file" value="" title="photo_main" id="photo_main" name="photo_main" class="form-control" required>
+                            </div> -->
+<!--                             <div class="form-group">
+                                <label for="photo_1">photo_1</label>
+                                <input type="file" name="photo_1" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="photo_2">photo_2</label>
+                                <input type="file" name="photo_2" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="photo_3">photo_3</label>
+                                <input type="file" name="photo_3" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="photo_4">photo_4</label>
+                                <input type="file" name="photo_4" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="photo_5">photo_5</label>
+                                <input type="file" name="photo_5" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="photo_6">photo_6</label>
+                                <input type="file" name="photo_6" class="form-control" required>
+                            </div> -->
+                            <input type="submit" value="Create" class="btn btn-secondary btn-block">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
